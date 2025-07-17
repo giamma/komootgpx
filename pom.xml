@@ -52,7 +52,7 @@
         <dependency>
             <groupId>io.jenetics</groupId>
             <artifactId>jpx</artifactId>
-            <version>3.0.1</version>
+            <version>3.2.1</version>
         </dependency>
         <dependency>
             <groupId>org.locationtech.jts</groupId>
