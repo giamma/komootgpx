@@ -3,6 +3,7 @@ package io.github.giamma.komootgpx;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
+import java.net.http.HttpClient.Redirect;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
@@ -29,7 +30,7 @@ public class KomootDownloader {
     
     public KomootDownloader() {
         this.httpClient = HttpClient.newBuilder()
-                .connectTimeout(Duration.ofSeconds(30))
+                .connectTimeout(Duration.ofSeconds(30)).followRedirects(Redirect.NORMAL)
                 .build();
         this.objectMapper = new ObjectMapper();
     }
